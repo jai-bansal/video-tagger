@@ -129,8 +129,6 @@ mobile_results = dict()
 nn_large_results = dict()
 
 # Loop through frames.
-# If the tagger is run for multiple videos, the 'frames' folder should be emptied
-# between videos!
 print('Generating Results')
 print('')
 for frame in os.listdir('frames'):
@@ -171,6 +169,9 @@ for frame in os.listdir('frames'):
     ic_resnet_results = update_dict(preds = ic_resnet_pred, result_dict = ic_resnet_results, prob_cutoff = 0.25)
     mobile_results = update_dict(preds = mobile_pred, result_dict = mobile_results, prob_cutoff = 0.25)
     nn_large_results = update_dict(preds = nn_large_pred, result_dict = nn_large_results, prob_cutoff = 0.25)
+
+    # Delete frame.
+    os.remove('frames/' + frame)
 
 # Remove tags that appear too infrequently.
 resnet_results = filter_dict(resnet_results)
