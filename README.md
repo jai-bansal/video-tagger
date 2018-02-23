@@ -13,6 +13,7 @@ Step 3: process outputs (for example, remove tags that appear infrequently) and 
 - A short video is provided in the repo.
 - Only every 30th frame is used (corresponding to 30 FPS) to keep things manageable.
 - A variety of open source image recognition models are tried.
-- IMPORTANT: The image recognition models are initialized with weights derived from training them on the ImageNet dataset (as opposed to random initialization weights). The weights for some of these models are >100 MB and so are NOT included. They must be downloaded into the 'weights' folder for the code to work. The links where these weights files can be found are included in the script comments.
+- IMPORTANT: The image recognition models are initialized with weights derived from training them on the ImageNet dataset (as opposed to random initialization weights). The weights for some of these models are >100 MB and so are NOT included. They must be downloaded into the 'weights' folder for the code to work. So the 'weights' folder is currently empty except for a text file. The links where these weights files can be found are included in the script comments.
+- The 'frames' folder is currently empty (except for a text file), but will hold the frames of the video.
 - This tagger works really badly if the video in question doesn't have a good, corresponding ImageNet dataset tag. For example, there's no ImageNet class for 'surfing' and so a surfing video will not be tagged well. Possible future work includes teaching the image recognition models about new classes.
 - More info on the ImageNet dataset can be found here: http://www.image-net.org/
