@@ -1,5 +1,5 @@
 #### Synopsis:
-This project builds a simple video tagger. Relevant topics/labels are returned for any (well, sort of) video.
+This project builds a simple video tagger. Relevant topics/labels are returned for any (well, sort of) video in ".mp4" format.
 
 #### Motivation:
 I wrote this project to experiment with open source image recognition models (more below) and some video analysis.
